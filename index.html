@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>timeCounter.js</title>
+	<style>
+	    @import url(https://fonts.googleapis.com/css?family=Kelly+Slab);
+        body{
+          font-family: 'Kelly Slab', cursive;
+        }
+        .jcountTimer{
+          font-weight: 100;
+          font-size: 2em;
+        }
+        .jcountTimer span{
+          display: block;
+          min-width: 80px;
+          float: left;
+          margin-right: 10px;
+          background: #ddd;
+          padding: 5px;
+          text-align: center;
+          border-radius: 3px;
+        }
+        .jcountTimer small{
+          display: block;
+          font-size: .5em;
+        }
+        .jcountTimer .days{
+          color: #65ada2;
+        }
+        .jcountTimer .hours{
+          color: #da6665;
+        }
+        .jcountTimer .minutes{
+          color: #adb87a;
+        }
+        .jcountTimer .seconds{
+          color: #916c80;
+          animation: removeText 1s forwards;
+        }
+        
+        @keyframes removeText{
+          0%{
+            margin-top: 0;    
+          }
+          80%{
+            margin-top: 0;    
+          }
+          100%{
+            margin-top: -10px;    
+          }
+        }
+	</style>
+	
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+    
+    <div>
+        <h4>Counting time for : 7/11/2016 18:25:00</h4>
+      <h3 class="jcountTimer"></h3>
+    </div>
+ 
+    <script type="text/javascript" src="timeCounter.js"></script>
+    <script type="text/javascript">
+        var Time = "7/11/2016 18:25:00";
+        setInterval(function() { countDown(".jcountTimer", Time) }, 1000);
+    </script>
+</body>
+</html>
